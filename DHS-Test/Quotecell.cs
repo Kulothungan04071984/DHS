@@ -17,5 +17,11 @@ namespace DHS_Test
         public decimal unitpriceOEMsectrets { get; set; }
         public decimal Listoutofvendors { get; set; }
 
+        //public string SumOfSilicon { get; set; }
+        //public string SumofQuotecel { get; set; }
+
+        //public string LeastValue { get; set; }
+
+
     }
 }
