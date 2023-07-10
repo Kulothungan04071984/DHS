@@ -130,7 +130,7 @@ namespace DHS_Test
                         lblSumQutecell.Text= ds.Tables[1].Rows[0]["Quotecell"].ToString();
                         lblSumLeast.Text= ds.Tables[1].Rows[0]["LeastValue"].ToString();
                         lblLeastQuotecell.Text= ds.Tables[1].Rows[0]["LeastANDQuotecelCompare"].ToString();
-                        lblMatchingQuotecellSilicon.Text= ds.Tables[1].Rows[0]["MatchingINQuotecellAndSilicon"].ToString();
+                        lblMatchingQuotecellSilicon.Text = Convert.ToString(Math.Round(Convert.ToDecimal(ds.Tables[1].Rows[0]["MatchingINQuotecellAndSilicon"].ToString())));
                         lblMatchingLeastQuetecell.Text= ds.Tables[1].Rows[0]["MatchingLeastAndQuetecell"].ToString();
                         lblSiliconQuotecell.Text= ds.Tables[1].Rows[0]["SiliconANDQuotecelCompare"].ToString();
                     }
