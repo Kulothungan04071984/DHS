@@ -60,6 +60,7 @@ namespace DHS_Test
             {
                 if (txtRowCount.Text.ToString() != string.Empty)
                 {
+                    OldDataUpdate();
                     string connectionString = "Server=10.10.112.91;Database=Quotecell;uid=sa;pwd=Syrma@123;";
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
@@ -76,7 +77,6 @@ namespace DHS_Test
 
                     //  Microsoft.Office.Interop.Excel.AutoFilter filter = range.AutoFilter;
                     Microsoft.Office.Interop.Excel.Range vRange = range.SpecialCells(Microsoft.Office.Interop.Excel.XlCellType.xlCellTypeVisible);
-
 
                    // string insertQuery = "INSERT INTO Material (MPN, MOQ, [Description],Silicon,Quotecell,Octopart,Oemsecretes,[Least],VendorName,IsActive) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5, @Value6, @Value7, @Value8, @Value9,@Value10)";
                     SqlCommand command = new SqlCommand("pro_InsertExcelValues", connection);
@@ -130,8 +130,8 @@ namespace DHS_Test
                         lblSumQutecell.Text= ds.Tables[1].Rows[0]["Quotecell"].ToString();
                         lblSumLeast.Text= ds.Tables[1].Rows[0]["LeastValue"].ToString();
                         lblLeastQuotecell.Text= ds.Tables[1].Rows[0]["LeastANDQuotecelCompare"].ToString();
-                        lblMatchingQuotecellSilicon.Text = Convert.ToString(Math.Round(Convert.ToDecimal(ds.Tables[1].Rows[0]["MatchingINQuotecellAndSilicon"].ToString())));
-                        lblMatchingLeastQuetecell.Text= ds.Tables[1].Rows[0]["MatchingLeastAndQuetecell"].ToString();
+                        lblMatchingQuotecellSilicon.Text = Convert.ToString(Math.Round(Convert.ToDecimal(ds.Tables[1].Rows[0]["MatchingINQuotecellAndSilicon"].ToString()), 2)) + " %";
+                        lblMatchingLeastQuetecell.Text=Convert.ToString(Math.Round(Convert.ToDecimal(ds.Tables[1].Rows[0]["MatchingLeastAndQuetecell"].ToString()),2)) + " %";
                         lblSiliconQuotecell.Text= ds.Tables[1].Rows[0]["SiliconANDQuotecelCompare"].ToString();
                     }
 
@@ -150,6 +150,17 @@ namespace DHS_Test
                 //System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
             }
 
+        }
+
+        private void OldDataUpdate()
+        {
+            string connectionString = "Server=10.10.112.91;Database=Quotecell;uid=sa;pwd=Syrma@123;";
+            SqlConnection connectionNew = new SqlConnection(connectionString);
+            SqlCommand cmdUpdate = new SqlCommand("pro_UpdateMaterial", connectionNew);
+            cmdUpdate.CommandType = CommandType.StoredProcedure;
+            connectionNew.Open();
+            cmdUpdate.ExecuteNonQuery();
+            connectionNew.Close();
         }
 
         private void btnExcelExport_Click(object sender, EventArgs e)
