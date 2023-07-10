@@ -18,5 +18,11 @@ namespace DHS_Test
         public double Listoutofvendors { get; set; }
         public string vendor { get; set; }
 
+        //public string SumOfSilicon { get; set; }
+        //public string SumofQuotecel { get; set; }
+
+        //public string LeastValue { get; set; }
+
+
     }
 }
