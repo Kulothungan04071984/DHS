@@ -29,96 +29,97 @@ namespace DHS_Test
         /// </summary>
         private void InitializeComponent()
         {
-            FileUpload = new System.Windows.Forms.Button();
-            dtView = new System.Windows.Forms.DataGridView();
-            txtFileName = new System.Windows.Forms.TextBox();
-            cmbSheet = new System.Windows.Forms.ComboBox();
-            label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            btnExport = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
-            SuspendLayout();
+            this.FileUpload = new System.Windows.Forms.Button();
+            this.dtView = new System.Windows.Forms.DataGridView();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.cmbSheet = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnExport = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtView)).BeginInit();
+            this.SuspendLayout();
             // 
             // FileUpload
             // 
-            FileUpload.Location = new System.Drawing.Point(722, 386);
-            FileUpload.Name = "FileUpload";
-            FileUpload.Size = new System.Drawing.Size(46, 23);
-            FileUpload.TabIndex = 0;
-            FileUpload.Text = "....";
-            FileUpload.UseVisualStyleBackColor = true;
-            FileUpload.Click += FileUpload_Click;
+            this.FileUpload.Location = new System.Drawing.Point(722, 386);
+            this.FileUpload.Name = "FileUpload";
+            this.FileUpload.Size = new System.Drawing.Size(46, 23);
+            this.FileUpload.TabIndex = 0;
+            this.FileUpload.Text = "....";
+            this.FileUpload.UseVisualStyleBackColor = true;
+            this.FileUpload.Click += new System.EventHandler(this.FileUpload_Click_1);
             // 
             // dtView
             // 
-            dtView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtView.Location = new System.Drawing.Point(13, 23);
-            dtView.Name = "dtView";
-            dtView.RowTemplate.Height = 25;
-            dtView.Size = new System.Drawing.Size(775, 359);
-            dtView.TabIndex = 1;
+            this.dtView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtView.Location = new System.Drawing.Point(13, 23);
+            this.dtView.Name = "dtView";
+            this.dtView.RowTemplate.Height = 25;
+            this.dtView.Size = new System.Drawing.Size(775, 359);
+            this.dtView.TabIndex = 1;
             // 
             // txtFileName
             // 
-            txtFileName.Location = new System.Drawing.Point(116, 387);
-            txtFileName.Name = "txtFileName";
-            txtFileName.Size = new System.Drawing.Size(591, 23);
-            txtFileName.TabIndex = 2;
+            this.txtFileName.Location = new System.Drawing.Point(116, 387);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(591, 23);
+            this.txtFileName.TabIndex = 2;
             // 
             // cmbSheet
             // 
-            cmbSheet.FormattingEnabled = true;
-            cmbSheet.Location = new System.Drawing.Point(116, 416);
-            cmbSheet.Name = "cmbSheet";
-            cmbSheet.Size = new System.Drawing.Size(209, 23);
-            cmbSheet.TabIndex = 3;
-            cmbSheet.SelectedIndexChanged += cmbSheet_SelectedIndexChanged;
+            this.cmbSheet.FormattingEnabled = true;
+            this.cmbSheet.Location = new System.Drawing.Point(116, 416);
+            this.cmbSheet.Name = "cmbSheet";
+            this.cmbSheet.Size = new System.Drawing.Size(209, 23);
+            this.cmbSheet.TabIndex = 3;
+            this.cmbSheet.SelectedIndexChanged += new System.EventHandler(this.cmbSheet_SelectedIndexChanged_1);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(68, 419);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(42, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Sheet :";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(68, 419);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Sheet :";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(44, 390);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(66, 15);
-            label2.TabIndex = 5;
-            label2.Text = "File Name :";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(44, 390);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "File Name :";
             // 
             // btnExport
             // 
-            btnExport.Location = new System.Drawing.Point(400, 419);
-            btnExport.Name = "btnExport";
-            btnExport.Size = new System.Drawing.Size(55, 23);
-            btnExport.TabIndex = 6;
-            btnExport.Text = "Export";
-            btnExport.UseVisualStyleBackColor = true;
-            btnExport.Click += btnExport_Click;
+            this.btnExport.Location = new System.Drawing.Point(400, 419);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(55, 23);
+            this.btnExport.TabIndex = 6;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click_1);
             // 
             // Import
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(btnExport);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(cmbSheet);
-            Controls.Add(txtFileName);
-            Controls.Add(dtView);
-            Controls.Add(FileUpload);
-            Name = "Import";
-            Text = "Import";
-            ((System.ComponentModel.ISupportInitialize)dtView).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbSheet);
+            this.Controls.Add(this.txtFileName);
+            this.Controls.Add(this.dtView);
+            this.Controls.Add(this.FileUpload);
+            this.Name = "Import";
+            this.Text = "Import";
+            ((System.ComponentModel.ISupportInitialize)(this.dtView)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

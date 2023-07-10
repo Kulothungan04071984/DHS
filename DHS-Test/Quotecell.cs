@@ -11,11 +11,12 @@ namespace DHS_Test
         public string MPN { get; set; }
         public string MOQ { get; set;}
         public string Description { get; set;}
-        public decimal Silicon { get; set; }
-        public decimal unitpriceQuotecell { get; set; }
-        public decimal unitpriceoctopart { get; set; }
-        public decimal unitpriceOEMsectrets { get; set; }
-        public decimal Listoutofvendors { get; set; }
+        public double Silicon { get; set; }
+        public double unitpriceQuotecell { get; set; }
+        public double unitpriceoctopart { get; set; }
+        public double unitpriceOEMsectrets { get; set; }
+        public double Listoutofvendors { get; set; }
+        public string vendor { get; set; }
 
     }
 }

@@ -52,5 +52,10 @@ namespace DHS_Test
         {
 
         }
+
+        private void txtweight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

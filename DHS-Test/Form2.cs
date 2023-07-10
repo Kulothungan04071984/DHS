@@ -38,9 +38,10 @@ namespace DHS_Test
                 Worksheet worksheet = (Worksheet)workbook.ActiveSheet;
                 Microsoft.Office.Interop.Excel.Range range = worksheet.UsedRange;
 
-                string insertQuery = "INSERT INTO Material (MPN, MOQ, [Description],Silicon,Quotecell,Octopart,Oemsecretes,[Least]) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5, @Value6, @Value7, @Value8)";
+                string insertQuery = "INSERT INTO Material (MPN, MOQ, [Description],Silicon,Quotecell,Octopart,Oemsecretes,[Least],LeastVentor) VALUES (@Value1, @Value2, @Value3, @Value4, @Value5, @Value6, @Value7, @Value8,@value9)";
                 SqlCommand command = new SqlCommand(insertQuery, connection);
-
+                
+                
                 for (int row = 2; row <= range.Rows.Count; row++)
                 {
                     command.Parameters.Clear();
@@ -52,12 +53,11 @@ namespace DHS_Test
                     command.Parameters.AddWithValue("@Value6", ((Microsoft.Office.Interop.Excel.Range)range.Cells[row, 6]).Value2.ToString());
                     command.Parameters.AddWithValue("@Value7", ((Microsoft.Office.Interop.Excel.Range)range.Cells[row, 7]).Value2.ToString());
                     command.Parameters.AddWithValue("@Value8", ((Microsoft.Office.Interop.Excel.Range)range.Cells[row, 8]).Value2.ToString());
-                    
-
-                    command.ExecuteNonQuery();
+                    command.Parameters.AddWithValue("@value9", ((Microsoft.Office.Interop.Excel.Range)range.Cells[row, 9]).Value2.ToString());
+                    //command.ExecuteNonQuery();
                 }
-                workbook.Close();
-                excelApp.Quit();
+                    workbook.Close();
+                    excelApp.Quit();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);

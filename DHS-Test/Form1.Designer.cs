@@ -36,12 +36,21 @@ namespace DHS_Test
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.btndownload = new System.Windows.Forms.Button();
             this.txtfixedtare = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -84,20 +93,11 @@ namespace DHS_Test
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -178,6 +178,40 @@ namespace DHS_Test
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(848, 496);
             this.panel1.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Location = new System.Drawing.Point(627, 74);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(198, 154);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Notes";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label26.Location = new System.Drawing.Point(6, 77);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(181, 60);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "-com ports parameters will not\r\n be saved to file and will be\r\n modified  inside " +
+    "com ports tab.\r\n not by the  below buttons.";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label25.Location = new System.Drawing.Point(6, 19);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(189, 45);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "\"Download to Device\"saves new\r\n changes untilpower cycling the \r\n device.";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // button13
             // 
@@ -265,6 +299,65 @@ namespace DHS_Test
             this.panel2.Size = new System.Drawing.Size(593, 408);
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Location = new System.Drawing.Point(210, 314);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(283, 82);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tare";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 19);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(242, 60);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Fixed Tare will be downloaded individually \r\nand only if the device is in NET mod" +
+    "e.\r\nIn addition tare will be canceled \r\nin power cycle(reset)";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Location = new System.Drawing.Point(17, 314);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(187, 82);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Measuring Units";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(18, 57);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(124, 15);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "Tare - In Weight Unit";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(18, 38);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(126, 15);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Band - In weight Unit";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(13, 19);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(135, 15);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Period - In milliseconds";
             // 
             // btndownload
             // 
@@ -539,6 +632,7 @@ namespace DHS_Test
             this.txtweight.Name = "txtweight";
             this.txtweight.Size = new System.Drawing.Size(131, 23);
             this.txtweight.TabIndex = 6;
+            this.txtweight.TextChanged += new System.EventHandler(this.txtweight_TextChanged);
             // 
             // label6
             // 
@@ -631,99 +725,6 @@ namespace DHS_Test
             this.label24.Text = "Exit";
             this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Location = new System.Drawing.Point(627, 74);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(198, 154);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Notes";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label25.Location = new System.Drawing.Point(6, 19);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(189, 45);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "\"Download to Device\"saves new\r\n changes untilpower cycling the \r\n device.";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.label26.Location = new System.Drawing.Point(6, 77);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(181, 60);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "-com ports parameters will not\r\n be saved to file and will be\r\n modified  inside " +
-    "com ports tab.\r\n not by the  below buttons.";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Location = new System.Drawing.Point(17, 314);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(187, 82);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Measuring Units";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(13, 19);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(135, 15);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Period - In milliseconds";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(18, 38);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(126, 15);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "Band - In weight Unit";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(18, 57);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(124, 15);
-            this.label29.TabIndex = 2;
-            this.label29.Text = "Tare - In Weight Unit";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Location = new System.Drawing.Point(210, 314);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(283, 82);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tare";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 19);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(242, 60);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Fixed Tare will be downloaded individually \r\nand only if the device is in NET mod" +
-    "e.\r\nIn addition tare will be canceled \r\nin power cycle(reset)";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -745,14 +746,14 @@ namespace DHS_Test
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
